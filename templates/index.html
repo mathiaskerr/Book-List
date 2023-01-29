@@ -17,12 +17,19 @@
         </form>
         </div>
         {%for book in book_list%}
-        <div>
+        <div id = "books">
             <p>
                 <a href= "books/{{loop.index-1}}">{{book.title}}</a><br>
                 Author: {{book.author}}<br>
                 Genre: {{book.genre}} <br>
+                {% if book.checked_in%}
+                Book: Checked In
+                {% else %}
+                Book: Checked Out
+                {% endif %}
             <form action = "books/delete/{{loop.index-1}}" method="post">   
+                <label for = "check_in_out"> Check Book In/Out</label>
+                <input type = "checkbox" id = "check_in_out" name= "check_in_out">
                 <label for="delete">Delete Book</label> 
                 <input type ="checkbox" id="delete" name="delete">
                 <input type="submit" value="Confirm">
