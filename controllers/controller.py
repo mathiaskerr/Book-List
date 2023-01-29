@@ -32,7 +32,6 @@ def remove_book(id):
 def check_in_out(id):
     if "check_in_out" in request.form:
         checking_book_in_out(id)
-        print(book_list[int(id)])
     return render_template("index.html", title = "Home", book_list=book_list)
 
 
