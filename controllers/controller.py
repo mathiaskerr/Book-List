@@ -28,10 +28,10 @@ def remove_book(id):
         delete_book(id)
     return redirect('/books')
 
-@app.route('/books/check_in_out/{{loop.index-1}}', methods=["POST"])
-def check_in_out(index):
+@app.route('/books/check_in_out/<id>', methods=["POST"])
+def check_in_out(id):
     print (request.form)
     if "check_in_out" in request.form:
-        checking_book_in_out(index)
+        checking_book_in_out(id)
     return redirect('/books')
 
