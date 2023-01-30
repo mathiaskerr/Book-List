@@ -15,6 +15,6 @@ def delete_book(id):
 def checking_book_in_out(id):
     book = book_list[int(id)]
     if book.checked_in == True:
-        book.checked_in 
+        book.checked_in = False
     else:
-        book.checked_in ==True
+        book.checked_in =True
