@@ -16,8 +16,9 @@
             <input type="submit" value="Add Book">
         </form>
         </div>
+        <div id = books>
         {%for book in book_list%}
-        <div id = "books">
+        <div id = book>
             <p>
                 <a href= "books/{{loop.index-1}}">{{book.title}}</a><br>
                 Author: {{book.author}}<br>
@@ -37,6 +38,7 @@
             </p>
         </div>
         {% endfor %}
+    </div>
     </main>
 </body>
 </html>

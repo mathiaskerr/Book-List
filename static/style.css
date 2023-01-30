@@ -23,12 +23,19 @@ main{
 }
 
 #books {
+    /* border: 1px  rgba(0, 0, 0, 0.714);
+    margin: 20px;
+    padding: 0px;
+    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431); */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#book{
     border: 1px  rgba(0, 0, 0, 0.714);
     margin: 20px;
     padding: 0px;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
-
 input {
     padding: 8px;
     margin-left: 15px;
